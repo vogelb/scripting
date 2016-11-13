@@ -8,6 +8,6 @@ Various Scripts for various purposes.
 * runscript.bat  
   Batch file to start cygwin bash scripts from explorer. Associate with appropriate file extension.
   Assumes installation folder c:\cygwin 
-* videolist  
-  Script collection to organize my movie collection.
+* movielist.sh
+  Cygwin bash script that organizes my movie collection.
    
