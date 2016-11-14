@@ -78,19 +78,22 @@ function find_movie() {
 # Command to search for movies in available catalogs.
 # If no search term is given, the script will run in interactive mode.
 # $1: The search term (optional)
+# The first matches will be shown from all catalogs
+# add /a to show all entries from all catalogs
 function cmd_find_movie() {
-	TERM=$1
+	TERM=$*
 	if [ "$TERM" != "" ]
 	then
 		if [ "${!#}" == "/a" ]
 		then
 			SORT_OPT=
+			TERM=${TERM:0:-3}
 		else 
 			SORT_OPT=-u
 		fi
 			
 		find_movie "$TERM" $SORT_OPT
-		exit2
+		exit
 	fi
 
 	while true
@@ -113,7 +116,7 @@ function cmd_find_movie() {
 					;;
 				*)
 					SORT_OPT=-u
-					TERM=$COMMAND
+					TERM="$COMMAND"
 					;;
 			esac
 			
