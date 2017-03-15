@@ -8,7 +8,7 @@
 declare -r MEDIAINFO=/c/Tools/mediainfo/mediainfo
 
 # Movie extensions to scan for
-declare -r extesions=avi\|mp4\|mkv\|mpeg\|mpg
+declare -r EXTENSIONS=avi\|mp4\|mkv\|mpeg\|mpg
 
 ###########################################################
 # Build a catalog of movie files in the current directory.
